@@ -3,6 +3,7 @@
 ## install
 
 - nvm
+
   [nvm](https://github.com/nvm-sh/nvm)
 
 - node.js
