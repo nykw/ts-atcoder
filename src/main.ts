@@ -7,14 +7,14 @@ const range = ((n: number | bigint) => {
   for (let i = 0n; i < n; i++) result.push(i);
   return result;
 }) as {
-  (n: number): number[];
-  (n: bigint): bigint[];
+  (n: number): readonly number[];
+  (n: bigint): readonly bigint[];
 };
 
-const zip = <X, Y>(xs: X[], ys: Y[]): [X, Y][] =>
+const zip = <X, Y>(xs: readonly X[], ys: readonly Y[]): readonly [X, Y][] =>
   range(Math.min(xs.length, ys.length)).map((i) => [xs[i], ys[i]]);
 
-const unzip = <X, Y>(xys: [X, Y][]): [X[], Y[]] =>
+const unzip = <X, Y>(xys: readonly [X, Y][]): [readonly X[], readonly Y[]] =>
   xys.reduce(
     ([xs, ys], [x, y]) => {
       xs.push(x);
