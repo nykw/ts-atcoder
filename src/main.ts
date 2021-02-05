@@ -1,6 +1,17 @@
 import { readFileSync } from "fs";
 
-const range = (n: number) => Array.from(Array(n), (_, i) => i);
+const range = ((n: number | bigint) => {
+  if (typeof n === "number") return Array.from(Array(n), (_, i) => i);
+
+  const result: bigint[] = [];
+  for (let i = 0n; i < n; i++) {
+    result.push(i);
+  }
+  return result;
+}) as {
+  (n: number): number[];
+  (n: bigint): bigint[];
+};
 
 const zip = <X, Y>(xs: X[], ys: Y[]): [X, Y][] =>
   range(Math.min(xs.length, ys.length)).map((i) => [xs[i], ys[i]]);
