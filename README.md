@@ -16,6 +16,8 @@
   $ npm install -g typescript typesync
   ```
 
+- clone this repository
+
 ## set up
 
 ```bash
