@@ -18,7 +18,7 @@ TypeScriptでAtCoderをしたい人用の提出テンプレートです。
 
 - npm packages
   ```bash
-  $ npm install -g typescript typesync
+  $ npm install -g typesync
   ```
 
 - clone this repository
