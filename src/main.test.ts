@@ -6,12 +6,12 @@ import { config } from "dotenv";
 config();
 test("check", () => {
   const input = readFileSync(
-    `${__dirname}/${process.env.INPUT_FILE!}`,
+    `${__dirname}/../${process.env.INPUT_FILE!}`,
     "utf-8"
   );
   const ans = solve(input);
   const output = readFileSync(
-    `${__dirname}/${process.env.OUTPUT_FILE!}`,
+    `${__dirname}/../${process.env.OUTPUT_FILE!}`,
     "utf-8"
   );
   expect(ans).toBe(output);
