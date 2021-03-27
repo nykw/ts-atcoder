@@ -5,6 +5,7 @@
   "main": "main.ts",
   "scripts": {
     "start": "ts-node src/main.ts",
+    "build": "tsc",
     "test": "jest",
     "postinstall": "typesync"
   },
