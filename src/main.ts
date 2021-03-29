@@ -32,7 +32,7 @@ const getCin = (buffer: string): [() => string, () => number, () => bigint] => {
   return [cin, () => Number(cin()), () => BigInt(cin())];
 };
 
-export const solve = (buffer: string): string => {
+const solve = (buffer: string): string => {
   const [cin, nCin, bCin] = getCin(buffer);
   return "";
 };
@@ -42,3 +42,5 @@ const main = (): void => {
 };
 // テスト時にコメントアウト
 main();
+
+export { range, zip, unzip, solve };
